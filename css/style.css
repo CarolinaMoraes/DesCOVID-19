@@ -1,0 +1,15 @@
+.wrapper{
+    width: 200px;
+    border-radius: 50px ;
+}
+.cabecalho i{
+    font-size: 30px;
+}
+
+.cabecalho h1{
+    font-size: 18px;
+}
+
+label{
+    font-size: 14px;
+}
