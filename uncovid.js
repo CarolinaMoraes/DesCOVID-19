@@ -24,40 +24,43 @@ function substituiCorona(node) {
     }
 }
 
-var extensaoAtiva = true;
-browser.runtime.onMessage.addListener((message) => {
-    console.log(message);
-    if (message.command === "switch-atividade") {
-        extensaoAtiva = message.status;
-    }
 
-    if (extensaoAtiva == 'true') {
-        //inicia procurando pelo nó body do HTML
-        substituiCorona(document.body);
+//TODO: Iniciar troca de mensagens
+// var extensaoAtiva = true;
+// browser.runtime.onMessage.addListener((message) => {
+//     console.log(message);
+//     if (message.command === "switch-atividade") {
+//         extensaoAtiva = message.status;
+//     }
 
-        /**
-         * Define um observador de mudanças na página,
-         * para cada nó adicionado usa o substituiCorona()
-         */
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.addedNodes && mutation.addedNodes.length > 0) {
-                    for (let i = 0; i < mutation.addedNodes.length; i++) {
-                        const newNode = mutation.addedNodes[i];
-                        substituiCorona(newNode);
-                    }
-                }
-            });
-        });
+//     if (extensaoAtiva == 'true') {
+//     }
+// });
 
-        /**
-         * Ativa o comportamento do observador
-         */
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
-    }
 
+//inicia procurando pelo nó body do HTML
+substituiCorona(document.body);
+
+/**
+ * Define um observador de mudanças na página,
+ * para cada nó adicionado usa o substituiCorona()
+ */
+const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        if (mutation.addedNodes && mutation.addedNodes.length > 0) {
+            for (let i = 0; i < mutation.addedNodes.length; i++) {
+                const newNode = mutation.addedNodes[i];
+                substituiCorona(newNode);
+            }
+        }
+    });
+});
+
+/**
+ * Ativa o comportamento do observador
+ */
+observer.observe(document.body, {
+    childList: true,
+    subtree: true
 });
 
