@@ -11,12 +11,15 @@
       "19": "icons/syringe.png",
       "38": "icons/syringe.png"
     },
-    "default_title": "DesCOVID-19",
-    "default_popup": "popup/popup.html"
+    "default_title": "DesCOVID-19"
+  },
+  "background": {
+    "scripts": ["background.js"]
   },
   "permissions": [
     "tabs",
     "activeTab",
+    "storage",
     "<all_urls>"
   ],
   "content_scripts": [

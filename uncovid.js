@@ -1,3 +1,4 @@
+
 /**
  * Função que procura se no nó do HTML informado há qualquer menção
  * ao Coronavírus
@@ -24,22 +25,9 @@ function substituiCorona(node) {
     }
 }
 
-
-//TODO: Iniciar troca de mensagens
-// var extensaoAtiva = true;
-// browser.runtime.onMessage.addListener((message) => {
-//     console.log(message);
-//     if (message.command === "switch-atividade") {
-//         extensaoAtiva = message.status;
-//     }
-
-//     if (extensaoAtiva == 'true') {
-//     }
-// });
-
-
 //inicia procurando pelo nó body do HTML
 substituiCorona(document.body);
+
 
 /**
  * Define um observador de mudanças na página,
