@@ -22,8 +22,9 @@
 - Selecione o arquivo "uncovid.js" na pasta do projeto
 - [Vídeo de referência](https://www.youtube.com/watch?v=cer9EUKegG4)
 
-
 3. Já está pronto para usar!
+
+
 
 ### 🦄 Google Chrome  
 
