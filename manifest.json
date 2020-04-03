@@ -13,13 +13,9 @@
     },
     "default_title": "DesCOVID-19"
   },
-  "background": {
-    "scripts": ["background.js"]
-  },
   "permissions": [
     "tabs",
     "activeTab",
-    "storage",
     "<all_urls>"
   ],
   "content_scripts": [
