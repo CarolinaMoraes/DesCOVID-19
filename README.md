@@ -2,9 +2,9 @@
 
 **Essa extensão percorre páginas web e substitui todas as menções ao COVID-19 por um emoji de '💉'**  
 
-## O que tem na extensão
+## Propósito geral
 
-* A extensão é composta por um content script, o "uncovid.js", que é injetado em qualquer página.
+* A extensão foi criada para um [desafio](https://twitter.com/CodigoFalado/status/1244296923424702465) criado pelo [@CodigoFalado](https://twitter.com/CodigoFalado).
 
 ## Como usar
 
